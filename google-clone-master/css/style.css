@@ -1,0 +1,337 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  body{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    
+    padding:60px 20px 40px 20px;
+  }
+  .header{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom:20px;
+   
+  }
+  .body{
+    width:100%;
+    height:500px;
+    overflow: hidden;
+    position:relative;
+    transition:0.2s ease all;
+    
+  }
+  .signIn,.passContainer{
+    position:relative;
+    height:auto;
+    width:100%;
+  }
+  .signIn{
+    left:0px; /*-13px */
+    
+   
+  }
+  .passContainer{
+    left:330px; /*-13px*/
+    top:-340px;
+   
+   
+  }
+  footer{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+  .signIn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    padding: 0 10px 10px 10px;
+    transition: 0.2s all ease;
+  }
+  .signIn h3{
+    font-size:32px;
+    font-weight:340;
+    color:#3D3D3F;
+    margin-bottom:10px;
+  }
+  .signIn p{
+    margin-bottom:15px;
+  }
+  .signIn input{
+    width:100%;
+    height:50px;
+    border-radius:3px;
+    border:none;
+    outline: none ;
+    padding:0 0 0 10px;
+    font-size:17px;
+    border:1px solid lightgray;
+    font-weight:400;
+    background:none;
+  }
+  .error{
+    width:100%;
+    text-align:left;
+    margin-bottom:0 !important;
+    display:none;
+    font-size:14px;
+    font-weight:500;
+    color:#AA2222;
+   
+  }
+  .forget{
+    width:100%;
+    text-align:left;
+    margin-top:3px!important;
+    color:#4285f4;
+    font-weight:500;
+  }
+  .not{
+    margin-top:30px;
+    font-weight:400;
+    color:#818181;
+    font-size:14px;
+  }
+  .not span{
+    font-size:14.5px;
+    font-weight:500;
+    color:#4285f4;
+  }
+  .btn{
+    margin-top:30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height:50px;
+  }
+  .btn a{
+    text-decoration: none;
+    font-weight:500;
+    color:#4285f4;
+  }
+  .btn a:last-child{
+    padding:10px 20px;
+    background:#515FFF;
+    border-radius:3px;
+    color:#fff;
+  }
+  .email{
+    position:relative;
+    width:200px;
+  }
+  .email:before{
+    content:"Email or phone";
+    position:absolute;
+    left:-40px;
+    top:var(--labelBeforeTop,-35px);
+    background:#fff;
+    z-index:var(--labelBeforeZindex,-1);
+    padding:0 5px;
+    font-size:var(--labelBeforeFontSize,16px);
+    color:var(--labelBeforeColor,#878787);
+    font-weight:420;
+    transition:0.2s ease;
+  }
+  
+  .signIn input:focus{
+    border:2px solid #4A59FF;
+    color:#373737;
+    font-weight:450px;
+  }
+  .loading{
+    position:absolute;
+    height:100vh;
+    width:100%;
+    top:0;
+    background:#F4F6FF75;
+    display:none;
+   z-index:2;
+  }
+  .inner{
+    position: relative;
+    width:200px;
+    height:7px;
+    background :#325FFF;
+    animation:myAnimation 1s linear infinite;
+    z-index:3;
+  }
+  @keyframes myAnimation{
+    0% {
+      left:0%;
+      right:100%;
+      width:0%;
+    }
+    10% {
+      left:0%;
+      right:75%;
+      width:35%;
+      
+    }
+    
+    90% {
+      right:0%;
+      left:75%;
+      width:50%;
+    }
+    100% {
+      left:100%;
+      right:0%;
+      width:0%;
+    }
+  }
+  .passContainer{
+    display:flex;
+    flex-direction:column;
+    padding:0 10px 10px 10px;
+    align-items:center;
+    transition:0.2s all ease;
+  }
+  .passContainer h3{
+    font-size:25px;
+    font-weight:400;
+    color:#3D3D3F;
+    margin-bottom:10px;
+    text-align: center;
+    
+  }
+  .info{
+    display:flex;
+    align-items: center;
+    gap:7px;
+    padding:3px 7px;
+    border:1px solid lightgray;
+    
+    justify-content: center;
+    border-radius:17px;
+  }
+  .name {
+    font-size:16px !important;
+    color:#383838 !important;
+    font-weight:600;
+  }
+  .passContainer input{
+    width:100%;
+    height:50px;
+    border-radius:3px;
+    border:none;
+    outline: none;
+    padding:0 0 0 10px;
+    font-size:17px;
+    border:1px solid lightgray;
+    font-weight:400;
+    background:none;
+    margin-top:30px;
+  }
+  .error2{
+    display:flex;
+    align-items: center;
+    gap:2px;
+    font-size:14px;
+    font-weight:400 !important;
+    color:#AA2222 !important;
+    text-align:left;
+    width:100%;
+    display:none;
+  }
+  .error2 span{
+    font-size:17px;
+  }
+  #show{
+    height:20px;
+    margin:0 !important;
+    width:20px;
+  }
+  .show{
+    width:100%;
+  }
+  .show label{
+    display:flex;
+    margin-top:10px;
+    align-items: center;
+    gap:20px;
+    width:60%;
+  }
+  
+  .btn2{
+    margin-top:50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height:50px;
+  }
+  .btn2 a{
+    text-decoration: none;
+    font-weight:500;
+    color:#4285f4;
+  }
+  .btn2 a:last-child{
+    padding:10px 20px;
+    background:#4252FF;
+    border-radius:3px;
+    color:#fff;
+  }
+  .pass {
+    position: relative;
+    width: 200px;
+  }
+  
+  .pass:before {
+    content: "Enter your password";
+    position: absolute;
+    left: -37px;
+    top: var(--label2BeforeTop, -34px);
+    background: #fff;
+    z-index: var(--label2BeforeZindex, -1);
+    padding: 0 5px;
+    font-size: var(--label2BeforeFontSize, 16px);
+    color: var(--label2BeforeColor, #878787);
+    font-weight: 420;
+    transition: 0.2s ease;
+  }
+  
+  .passContainer input:focus {
+    border: 2px solid #4A59FF;
+    color: #373737;
+    font-weight: 450px;
+  }
+  .info:active{
+    background:#EBEBEC;
+  }
+  .option{
+    position:relative;
+    left:-379.5px;
+    top:44.5px;
+    box-shadow:1px 3px 6px #B7B7B7;
+    border-radius:3px;
+    width:0;
+    height:0;
+    overflow:hidden;
+    transition: 0.3s ease;
+  }
+  .btn a:first-child{
+    padding:10px;
+    border-radius:5px;
+    background: transparent;
+    transition:0.2s;
+  }
+  .option div{
+    text-align:left;
+    padding:20px 10px 15px 15px;
+  }
+  .option div:hover{
+    background:#E5E7FF;
+  }
+
+
+  .signIn {
+   text-decoration: none; 
+  }
